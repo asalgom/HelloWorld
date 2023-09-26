@@ -1,0 +1,1 @@
+memberSearchIndex = [{"p":"com.example.helloword","c":"MainActivity","l":"MainActivity()","u":"%3Cinit%3E()"},{"p":"com.example.helloword","c":"MainActivity","l":"onCreate(Bundle)","u":"onCreate(android.os.Bundle)"}];updateSearchResults();
