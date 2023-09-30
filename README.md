@@ -14,5 +14,16 @@ En la MainActivity.java pusimos objetos de tipo TextView para poner un texto de 
 
 # Poner un icono
 
+Vimos tambien de como poner un icono para nuestra aplicacion, para ello teniamos que crear una Image Asset, pero primero teniamos que eliminar las carpetas que tenian el icono por defecto, y luego cuando creamos nuestro icono se nos creara la mismas carpetas que hemos borrado pero esta vez con el icono que hemos puesto, cada una de estas carpetas tiene un icono con un tamaño diferente para dispositivos diferentes de Android. Vamos a Image Asset y nos creamos nuestro icono, nos descargamos una imagen en una pagina web donde podemos descargar iconos gratuitos, lo seleccionamos, se nos creara las carpetas que dije antes y si ejecutamos nuestra aplicacion se mostrara el icono que hemos creado.
+
+# JavaDoc
+
+# .gitignore
+
+# Subir nuestro proyecto al repositorio de GitHub
+
+# Captura de pantalla de la aplicacion en mi movil
+
+![](Captura de pantalla HelloWorld en mi movil.png)
 
 
