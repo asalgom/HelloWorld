@@ -2,13 +2,13 @@
 
 # Primeros pasos
 
-Primero hemos estado viendo como funciona el entorno de desarrollo Android Studio como crear un proyecto, en que lenguaje de programacion lo queremos,elegir un activity, hemos creado un emulador para ver como se ejecutaran las aplicaciones que vamos haciendo, tambien vimos que tambien se puede ver las aplicaciones que vamos haciendo en nuestro movil, para ello tenemos que desbloquear las opciones de desarrollador, vamos a los ajustes de nuestro movil despues a Acerca del telefono y luego ir a Informacion de Software y luego seleccionar varias veces numero de compilacion y ya tendriamos las opciones de desarrollador. Ahora activamos la opcion depuracion USB, ponemos un cable USB en nuestro movil y ya la aplicacion se instalara en nuestro movil automaticamente y se ejecutara.
+Primero hemos estado viendo como funciona el entorno de desarrollo Android Studio como crear un proyecto, en que lenguaje de programacion lo queremos, elegir un activity, hemos creado un emulador para ver como se ejecutaran las aplicaciones que vamos haciendo, tambien vimos que tambien se puede ver las aplicaciones que vamos haciendo en nuestro movil, para ello tenemos que desbloquear las opciones de desarrollador, vamos a los ajustes de nuestro movil despues a Acerca del telefono y luego ir a Informacion de Software y luego seleccionar varias veces numero de compilacion y ya tendriamos las opciones de desarrollador. Ahora activamos la opcion depuracion USB, ponemos un cable USB en nuestro movil y ya la aplicacion se instalara en nuestro movil automaticamente y se ejecutara.
 
-Yo he tenido un problema que el entorno de desarrollo y es que no me reconocia mi movil, investigue si el cable USB que usaba estaba en mal estado o que si tenia que reiniciar mi movil antes de conectarlo a mi portátil, hasta vi que habia una opcion que era Thoubleshoot device connection que consiste en buscar dispositivos reconocibles y vi de que aparece dispositivos que no se pueden reconocer y ahi salia mi movil, asi que investigue que es lo que pasaba y encontre una solucion, tenia que instalar drives de USB de mi movil especifico en mi portartil que es un LG, lo instale y ya me lo reconoce y me deja instalar aplicaciones en mi movil.
+Yo he tenido un problema que el entorno de desarrollo y es que no me reconocia mi movil, investigue si el cable USB que usaba estaba en mal estado o que si tenia que reiniciar mi movil antes de conectarlo a mi portátil, hasta vi que habia una opcion que era Thoubleshoot device connection que consiste en buscar dispositivos reconocibles y vi de que aparece dispositivos que no se pueden reconocer y ahi salia mi movil, asi que investigue que es lo que pasaba y encontre una solucion, tenia que instalar drives de USB de mi movil especifico en mi portatil que es un LG, lo instale y ya me lo reconoce y me deja instalar aplicaciones en mi movil.
 
 # Interfaz
 
-Vimos tambien como es la interfaz de nuestra aplicacion que seria en activity_main.xml, vimos el componente TextView que es una caja de texto no editable, vimos tambien que con el codigo del xml podemos editar algunas opciones como que texto tendra, el posicionamiento del texto, su tamaño, su color, el color de fondo, su estilo, el tamaño. Tambien vimos como ponerle un id. Tambien vimos algunos xml de recursos que son color.xml y string.xml, el color.xml que podemos definir los colores que utilizaran en nuestra aplicación mediante elementos XML asi podemos reutilizar colores cuando lo necesitemos. Y el string.xml se utiliza para definir y gestionar las cadenas de texto utilizadas en nuestra aplicacion esto facilita la localización, la reutilización y la personalización del texto de la aplicación.
+Vimos tambien como es la interfaz de nuestra aplicacion que seria en activity_main.xml, vimos el componente TextView que es una caja de texto no editable, vimos tambien que con el codigo del xml podemos editar algunas opciones como que texto tendra, el posicionamiento del texto, su tamaño, su color, el color de fondo, su estilo, el tamaño. Tambien vimos como ponerle un id. Tambien vimos algunos xml de recursos que son color.xml y string.xml, el color.xml que podemos definir los colores que utilizaran en nuestra aplicación mediante elementos XML asi podemos reutilizar colores cuando lo necesitemos. Y el string.xml se utiliza para definir y gestionar las cadenas de texto utilizadas en nuestra aplicacion, esto facilita la localización, la reutilización y la personalización del texto de la aplicación.
 
 En el MainActivity.java pusimos objetos de tipo TextView para poner un texto de inicio y otro texto para el final, y usamos el metodo findViewById para buscar por id los TextView que hemos definido antes, como es un recurso ponemos R.id.TvInicial. y luego para cambiar el color de los TextView cuando se ejecuta la aplicacion usamos el metodo setTextColor ponemos la clase Color y luego seleccionamos el color que queremos poner a los TextView.
 
@@ -26,24 +26,49 @@ Despues teniamos que añadir esta ruta como una dependencia, nos vamos a File lu
 
 Pero despues hubo otro problema, que al ejecutar la aplicacion daba un error era que ya existe un archivo llamado 'AndroidManifest.xml' dentro del archivo APK de nuestra aplicacion, y no se puede sobrescribirlo. Probe una solucion que era borrar la version anterior del APK y luego hacer un Build y un Clear Project para generar una nueva APK, pero no funciono asi que la solucion que vimos en clase era comentar una linea del build.gradle.ktd de la carpeta app, despues de eso la aplicacion volvio a funcionar.
 
-# .gitignore
-
-Tambien vimos
-
-# Subir nuestro proyecto al repositorio de GitHub
+# Subir nuestro proyecto al repositorio remoto de GitHub
 
 Tambien vimos como subir nuestro proyecto HelloWorld a un repositorio de GitHub, primero nos creamos una cuenta, creamos un repositorio con un nombre, seleccioamos si lo queremos publico o privado en mi caso lo puse como publico y por ultimo pulsamos Create repository y ya tendriamos un repositorio remoto para poner nuestro proyecto de Android Studio
 
 Ahora para subir nuestro proyecto al repositorio que hemos creado, tenemos que hacer una serie de comando de Git en la terminal del entorno de desarrollo, el orden es la siguiente:
 
-- git init. Este comando inicializa un nuevo repositorio Git local en el directorio actual. Después de ejecutar este comando, Git comenzará a rastrear los cambios en los archivos de ese directorio.
+- Inicializamos Git en nuestro proyecto de con git init. Este comando inicializa un nuevo repositorio Git local en el directorio actual. Después de ejecutar este comando, Git comenzará a rastrear los cambios en los ficheros de ese directorio.
+  
+- Agregamos una conexión remota a nuestro repositorio remoto de GitHub con el siguiente comando que en mi caso para la url seria asi:
+  
+  git remote add origin https://github.com/asalgom/HelloWorld 
+  
+- Agregamos todos los cambios en el directorio de trabajo al área de preparación. El comando es:
+
+  git add .
+
+  El punto . significa "todos los archivos y subdirectorios".
+  
+- Creamos un commit con un mensaje descriptivo que explique los cambios que hemos hecho. El comando es:
+
+  git commit -m "Version original"
+
+  con -m podemos poner el mensaje descriptivo
+
+- Para terminar hacemos un push a nuestro repositorio remoto de GitHub con el siguiente comando:
+
+  git push origin master
+
+  origin es el nombre de la conexión remota que agregamos antes, y master es la rama en la que estamos trabajando.
+
+# .gitignore
+
+Tambien modificamos el .gitignore para que no incluya algunas carpetas como el .idea, copiamos el .gitignore que estaba en la moodle y lo pegamos en nuestro .gitignore. Despues hicimos lo siguiente:
+
+hicimos un git rm -r --cached . para eliminar el area de intercambio, luego un git add . despues un git add commit y luego ponemos el push al final
 
 # Captura de pantalla de la aplicacion en mi movil
 
-Vi un metodo para poner una captura de pantalla en el README.md y es la siguiente:
+Vi el metodo para poner una captura de pantalla en el README.md en la pagina web Editor.md y es la siguiente:
 
-- Primero subimos a nuestro repositorio la imagen que queremos usar para ponerlo en el README.md, la subi a la rama master
-- Despues usamos la sintaxis Markdown para incluir la imagen que hemos subido a nuestro repositorio. Empezamos con la exclamacion ! y entre llaves ponemos un texto descriptivo que se mostrara si la imagen no se puede cargar o si se pasa el raton por encima de la imagen, y por ultimo entre parentesis la imagen que esta subida en el repositorio, si la imagen se encuentra en la raíz de nuestro repositorio simplemente ponemos el nombre de la imagen. Si estuviara en otra carpeta la imagen seria carpeta/imagen.png. Despues le damos a Commit changes y ya tendriamos una imagen en nuestro README.md
+- Primero subimos a nuestro repositorio la imagen que queremos usar para ponerlo en el README.md, la subi a la rama master.
+  
+- Despues usamos la sintaxis Markdown para incluir la imagen que hemos subido a nuestro repositorio. Empezamos con la exclamacion ! y entre llaves ponemos un texto descriptivo que se mostrara si la imagen no se puede cargar y por ultimo entre parentesis la imagen que esta subida en el repositorio, si la imagen se encuentra en la raíz de nuestro repositorio simplemente ponemos el nombre de la imagen. Si estuviara en otra carpeta la imagen seria carpeta/imagen.png. Despues le damos a Commit changes y ya tendriamos una imagen en nuestro README.md
 
 ![AplicacionHelloWorldEnMiMovil](CapturaHelloWorld.png)
 
