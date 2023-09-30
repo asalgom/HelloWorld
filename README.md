@@ -18,9 +18,15 @@ Vimos tambien de como poner un icono para nuestra aplicacion, para ello teniamos
 
 # JavaDoc
 
+Tambien vimos
+
 # .gitignore
 
+Tambien vimos
+
 # Subir nuestro proyecto al repositorio de GitHub
+
+Tambien vimos
 
 # Captura de pantalla de la aplicacion en mi movil
 
