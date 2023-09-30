@@ -32,8 +32,5 @@ Tambien vimos
 
 ![](CapturaHelloWorld.png)
 
-# Captura de pantalla de la aplicacion en mi movil
-
-![](Captura de pantalla HelloWorld en mi movil.png)
 
 
