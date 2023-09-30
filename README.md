@@ -1,1 +1,6 @@
 # HelloWorld
+
+# Primeros pasos
+Primero hemos estado viendo como funciona el entorno de desarrollo Android Studio como crear un proyecto, en que lenguaje de programacion lo queremos,elegir un activity, hemos creado un emulador para ver como se ejecutaran las aplicaciones que vamos haciendo, tambien vimos que tambien se puede ver las aplicaciones que vamos haciendo en nuestro movil, para ello tenemos que desbloquear las opciones de desarrollador, vamos a los ajustes de nuestro movil despues a Acerca del telefono y luego ir a Informacion de Software y luego seleccionar varias veces numero de compilacion y ya tendriamos las opciones de desarrollador. Ahora activamos la opcion depuracion USB, ponemos un cable USB en nuestro movil y ya la aplicacion se instalara en nuestro movil automaticamente y se ejecutara.
+
+Yo he tenido un problema que el entorno de desarrollo no me reconocia mi movil, investigue si el cable USB que usaba estama en mal estado o que tenia que reiniciar mi movil antes de conectarlo a mi portatil, hasta habia una opcion que era Thoubleshoot device connection que consiste en buscar dispositivos reconocibles y vi de que aparece dispositivos que no se pueden reconocer y ahi salia mi movil, asi que investigue que es lo que pasaba y encontre una solucion 
